@@ -1,0 +1,51 @@
+$SettingsToRemove = @(
+)
+$SettingsToAdd = @(
+"EnableIEClickToPlay=1"
+)
+
+$Pathx86 = "$($ENV:SystemRoot)\System32\Macromed\Flash"
+
+# remove copies of cfg from any previous runs of this script
+if ( Test-Path "$Pathx86\mms.cfg.new" ) { Remove-Item "$Pathx86\mms.cfg.new" }
+if ( Test-Path "$Pathx86\mms.cfg.copy" ) { Remove-Item "$Pathx86\mms.cfg.copy" }
+
+# recreate the mms file with ANSI encoding
+if ( Test-Path "$Pathx86\mms.cfg" ) {
+   Rename-Item "$Pathx86\mms.cfg" "mms.cfg.copy"
+   Get-Content "$Pathx86\mms.cfg.copy" | Out-File "$Pathx86\mms.cfg" -Encoding ascii
+}
+
+if ( -not (Test-Path -Path "$Pathx86") ) {
+   # create the folder for the mms.cfg file if not exist
+   md $Pathx86 -Force
+} else {
+   if ( -not (Test-Path "$Pathx86\mms.cfg") ) {
+      # file does not exist so create .new file and add settings to it
+      New-Item "$Pathx86\mms.cfg.new" -type file
+      ForEach ( $SettingToAdd in $SettingsToAdd ) {
+         Add-Content "$Pathx86\mms.cfg.new" -Value $SettingToAdd
+      }
+   } else {
+      # since file already exists, lets remove lines as needed then add settings as needed
+      $MMSContent = Get-Content "$Pathx86\mms.cfg"
+      ForEach ( $line in $MMSContent ) {
+         if ( -not ($SettingsToRemove -contains $line) ) {
+            Add-Content "$Pathx86\mms.cfg.new" -Value $line
+         }
+      }
+      ForEach ( $Setting in $SettingsToAdd ) {
+         if ( -not ($MMSContent -contains $Setting) ) {
+            Add-Content "$Pathx86\mms.cfg.new" -Value $Setting
+         }
+      }
+
+   }
+}
+# clean up files
+if ( Test-Path "$Pathx86\mms.cfg.old" ) { Remove-Item "$Pathx86\mms.cfg.old" }
+if ( Test-Path "$Pathx86\mms.cfg.copy" ) { Remove-Item "$Pathx86\mms.cfg.copy" }
+if ( Test-Path "$Pathx86\mms.cfg" ) { Rename-Item "$Pathx86\mms.cfg" "mms.cfg.old" }
+if ( Test-Path "$Pathx86\mms.cfg.new" ) { Rename-Item "$Pathx86\mms.cfg.new" "mms.cfg" }
+
+

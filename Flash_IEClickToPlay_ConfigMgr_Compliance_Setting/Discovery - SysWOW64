@@ -1,0 +1,29 @@
+$SettingsToRemove = @(
+)
+$SettingsToAdd = @(
+"EnableIEClickToPlay=1"
+)
+
+$Adds = 0
+$Removes = 0
+
+if ( -not (Test-Path "$env:SystemRoot\SysWOW64\Macromed\Flash\mms.cfg") ) {
+   Write-Host "File not found"
+} else {
+   $MMSContent = Get-Content "$env:SystemRoot\SysWOW64\Macromed\Flash\mms.cfg"
+   ForEach ( $Setting in $SettingsToRemove ) {
+      if ( $MMSContent -contains $Setting ) {
+         $Removes += 1
+      }
+   }
+   ForEach ( $Setting in $SettingsToAdd ) {
+      if ( -not ($MMSContent -contains $Setting) ) {
+         $Adds += 1
+      }
+   }
+   if ( ($Adds -eq 0) -and ($Removes -eq 0) ) {
+      Write-Host "OK"
+   } else {
+      Write-Host "Error: $Adds to add, $Removes to remove"
+   }
+}
