@@ -1,0 +1,8 @@
+C:\Users\sfreema4\Documents\Visual Studio 2012\Projects\GetADGroupMembership\GetADGroupMembership\bin\Debug\GetADGroupMembership.exe
+C:\Users\sfreema4\Documents\Visual Studio 2012\Projects\GetADGroupMembership\GetADGroupMembership\bin\Debug\GetADGroupMembership.pdb
+C:\Users\sfreema4\Documents\Visual Studio 2012\Projects\GetADGroupMembership\GetADGroupMembership\bin\Debug\GetADGroupMembership.xml
+C:\Users\sfreema4\Documents\Visual Studio 2012\Projects\GetADGroupMembership\GetADGroupMembership\obj\Debug\GetADGroupMembership.vbproj.GenerateResource.Cache
+C:\Users\sfreema4\Documents\Visual Studio 2012\Projects\GetADGroupMembership\GetADGroupMembership\obj\Debug\GetADGroupMembership.exe
+C:\Users\sfreema4\Documents\Visual Studio 2012\Projects\GetADGroupMembership\GetADGroupMembership\obj\Debug\GetADGroupMembership.xml
+C:\Users\sfreema4\Documents\Visual Studio 2012\Projects\GetADGroupMembership\GetADGroupMembership\obj\Debug\GetADGroupMembership.pdb
+C:\Users\sfreema4\Documents\Visual Studio 2012\Projects\GetADGroupMembership\GetADGroupMembership\obj\Debug\GetADGroupMembership.Resources.resources
