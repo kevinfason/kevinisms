@@ -1,0 +1,13 @@
+Hello,
+
+You recently received a new or refreshed computer system, and we hope that it suits all of your needs. As part of the computer build process, your computer %COMPUTER% has been randomly selected to participate in the software “Patch Testing Group” (PTG) for My COMPANY.
+
+What this means is that your computer is one of a select few that will receive monthly software patches one week earlier than everyone else. This group of people and their computers help IT by receiving new patches for the Windows operating system and standard desktop software, and identifying any issues, before those patches are pushed to the rest of the firm. By participating in this test group, you are providing an invaluable service to the firm and your peers.
+
+What does this change for you? Nothing, really. The HelpDesk team will send you an email once a month letting you know when to expect the updates and how to provide feedback. Your computer will typically receive those updates on the second Thursday of the month; everyone else will receive them on the third Tuesday of each month. You are being asked to continue to use your computer as you normally would, and provide feedback if any problems arise.
+
+We have had a Patch Testing Group in place for several years, and have found very little to no interruption for testers. However, if you are not comfortable being an early tester, you can contact the HelpDesk by submitting an online request to have yourself removed from the group.
+
+Thank you for your participation,
+
+HelpDesk
