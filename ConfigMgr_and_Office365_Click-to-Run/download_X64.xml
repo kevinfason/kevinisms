@@ -1,0 +1,16 @@
+<Configuration>
+ 
+<Add SourcePath="\\path\to\my\server\OfficeClick2Run\Office2013" OfficeClientEdition="64">
+ 
+      <Product ID="O365ProPlusRetail">
+ 
+        <Language ID="en-us" />
+ 
+      </Product>
+
+  
+  </Add>
+ 
+   <Logging Level="Standard" Path="%temp%" />
+
+</Configuration>
